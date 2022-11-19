@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+{% if y is false %}
+<p> Currently your MONTHLY limit is ₹ 0 </p>
+{% else %}
+<p> Currently your MONTHLY limit is ₹ {{y[0]}} </p>
+{% endif %}
+
+<form action="/limitnum" method="POST">
+
+    <p> ENTER the MONTHLY LIMIT to avoid over EXPENSES</p> <br/>
+    <input type="number" name="number" required/> <span> 
+        <button class="btn btn-warning" type="submit">ENTER</button>
+    </span>
+    
+
+
+
+</form>
+{% endblock %}
